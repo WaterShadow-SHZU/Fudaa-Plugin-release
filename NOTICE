@@ -1,0 +1,90 @@
+# 声明
+
+本文件说明本仓库里哪些内容是 Canal 原创、哪些是别人的程序或图。许可正文在 [LICENSE](LICENSE)。OW2 ASM 的许可全文同时放在 [lib/ASM-LICENSE](lib/ASM-LICENSE)。
+
+---
+
+## 一、致谢与独立地位
+
+感谢 Fudaa-LSPIV 的作者与维护者。Fudaa-LSPIV 自 2010 年起由 EDF 与 INRAE 合作开发并发行，实现方为 DeltaCAD。
+
+Canal 是 Fudaa-LSPIV 1.11.3 的独立衍生插件：它注入该版本，并用 ASM 修补其 PIV 启动路径。本仓库不是 INRAE、EDF 或 DeltaCAD 的官方产品，也未获上述机构背书。「Fudaa」与「LSPIV」的名称归各自权利人所有。窗口标题中的「Fudaa-LSPIV」只表示所配套的宿主程序。
+
+| 材料 | 位置 |
+| --- | --- |
+| 官方项目页 | <https://riverhydraulics.riverly.inrae.fr/eng/tools/measurement-software/fudaa-lspiv> |
+| 用户手册 | <https://gitlab.com/fudaa/fudaa-lspiv/-/wikis/home> |
+| 界面源码（GNU GPL v2） | <https://gitlab.com/fudaa/fudaa-lspiv> |
+
+上游项目页请求的软件引用：
+
+Le Coz, J., Jodeau, M., Hauet, A., Marchand, B., Le Boursicaud, R. (2014). Image-based velocity and discharge measurements in field and laboratory river engineering studies using the free FUDAA-LSPIV software. River Flow 2014, Lausanne, Switzerland.
+
+---
+
+## 二、Fudaa-LSPIV 不在本仓库里
+
+Fudaa-LSPIV 以 GNU GPL 第 2 版（GPL-2.0）发布。本仓库不附带、不内嵌该程序：没有 `appli.exe`，没有上游 jar，没有求解器 exe，也没有原版安装树。请从第一节的官方项目取得 Fudaa-LSPIV 1.11.3，再按 README 注入或编译。
+
+除非分发时能够同时履行 GPL-2.0 对相应源代码的义务，不要再分发原厂程序树（`appli.exe`、上游 jar、求解器 exe 等）。把 Canal 与一份上游安装组合使用或向外分发时，组合作品同时受上游 GPL-2.0 约束。请以手头安装包里的许可文本为准。本仓库把 Canal 原创部分授予「第 2 版或更新的版本」，并不能把一份只按 GPL-2.0 发布的上游程序改成其他许可。
+
+---
+
+## 三、本仓库原创部分的许可
+
+下列内容以 GNU GPL 第 2 版或（按你的选择）任何更新的版本授权，全文见 [LICENSE](LICENSE)：
+
+- `src/` 与 `build-src/` 中的 Canal 原创源码
+- `inject/` 注入脚本
+- `build.ps1`、`tools/` 构建脚本
+- `docs/`、`README.md`、`ext-example/` 中的文档与示例
+- Canal 原创图标（见第五节）
+
+`ext-example/` 只是扩展接口的空骨架，同样适用上述许可。
+
+---
+
+## 四、OW2 ASM 9.7.1
+
+`lib/asm-9.7.1.jar` 与 `lib/asm-commons-9.7.1.jar` 是 OW2 ASM 9.7.1，许可为 BSD-3-Clause。jar 清单中的 `Bundle-License` 指向 <https://asm.ow2.io/LICENSE.txt>。下面是该文本的副本，并另存为 [lib/ASM-LICENSE](lib/ASM-LICENSE)。构建注入包时，`build.ps1` 会把这份文本随 `asm-9.7.1.jar` 放进注入包。
+
+```text
+ASM: a very small and fast Java bytecode manipulation framework
+Copyright (c) 2000-2011 INRIA, France Telecom
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holders nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+---
+
+## 五、图标
+
+| 文件 | 归属 |
+| --- | --- |
+| `icons/icone-lspiv.png` | 上游 Fudaa-LSPIV 的 64×64 开屏图。本仓库保留它，只为让宿主开屏仍显示上游标志。版权归上游作者，许可随 Fudaa-LSPIV 的 GPL-2.0，不是 Canal 原创。 |
+| `icons/Canal.png` | Canal 原创标识（256×256），随本项目按 GPL-2.0-or-later 授权。 |
+| `icons/canal-icon.png` | Canal 原创窗口图标（48×48），随本项目按 GPL-2.0-or-later 授权。 |
+| `icons/canal.ico` | Canal 原创快捷方式图标，随本项目按 GPL-2.0-or-later 授权。 |
