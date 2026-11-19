@@ -266,7 +266,7 @@ Le Coz, J., Jodeau, M., Hauet, A., Marchand, B., Le Boursicaud, R. (2014). Image
 
 ## 十、许可与归属
 
-Canal 原创插件源码、注入脚本、构建脚本和文档，以 GNU GPL 第 2 版或（按你的选择）任何更新的版本授权。授予与许可证全文在 [LICENSE](LICENSE)。
+Canal 原创插件源码、注入脚本、构建脚本和文档，以 GNU GPL 第 2 版或（按你的选择）任何更新的版本授权。授予在 [NOTICE](NOTICE)，许可证全文在 [LICENSE](LICENSE)。
 
 请同时阅读 [NOTICE](NOTICE)。其中说明：
 
