@@ -32,7 +32,10 @@ Fudaa-LSPIV 以 GNU GPL 第 2 版（GPL-2.0）发布。本仓库不附带、不�
 
 ## 三、本仓库原创部分的许可
 
-下列内容以 GNU GPL 第 2 版或（按你的选择）任何更新的版本授权，全文见 [LICENSE](LICENSE)：
+Canal 原创插件源码、注入脚本、构建脚本与文档
+Copyright (C) 2026 WaterShadow-SHZU
+
+下列内容以 GNU GPL 第 2 版或（按你的选择）任何更新的版本授权：
 
 - `src/` 与 `build-src/` 中的 Canal 原创源码
 - `inject/` 注入脚本
@@ -41,6 +44,23 @@ Fudaa-LSPIV 以 GNU GPL 第 2 版（GPL-2.0）发布。本仓库不附带、不�
 - Canal 原创图标（见第五节）
 
 `ext-example/` 只是扩展接口的空骨架，同样适用上述许可。
+
+许可授予如下。未经修改的 GNU 通用公共许可证第 2 版全文在 [LICENSE](LICENSE)。第三方组件（上游 Fudaa-LSPIV、OW2 ASM、开屏图）不在这项授予之内，见本文件第二节、第四节与第五节。
+
+```text
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+```
 
 ---
 
